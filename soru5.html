@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Bilgisayar Programlama BM-203</title>
+	<meta charset="UTF-8">
+    <meta http-equiv="refresh" content="240; URL=soru2.html">
+
+	<style>
+		body {
+			font-family: Arial, sans-serif;
+		}
+	</style>
+</head>
+<body>
+    <div class="test-alani">
+        <h1>Bilgisayar Programlama BM-203</h1>
+        <h4 style="color:red;">Sorular arasında geçiş yapılamaz.Tüm soruları cevapladıktan sonra Uygulamayı Bitir butonuna basarak puanınızı görüntüleyebilirsiniz.</h4>
+        <div class="zamanlayici"><div id="zamanlayici">4:00</div>
+    
+    <script>
+    var dakika = 4; // zamanlayıcı süresi (dakika cinsinden)
+    var saniye = dakika * 60; // saniye cinsine çevir
+    
+    var zamanlayici = setInterval(function() {
+    saniye--;
+    
+    var dakikaKalan = Math.floor(saniye / 60);
+    var saniyeKalan = saniye % 60;
+    
+    var zamanlayiciDiv = document.getElementById("zamanlayici");
+    zamanlayiciDiv.innerHTML = dakikaKalan + ":" + (saniyeKalan < 10 ? "0" : "") + saniyeKalan;
+    
+    if (saniye == 0) {
+      clearInterval(zamanlayici);
+      alert("Süre doldu!");
+    }
+    }, 1000); // her saniye güncelle
+    </script></div>
+	<h1>Soru 5</h1>
+	<form action="soru6.html" method="post">
+		<p>Java uygulamaları hangi formatta derlenir?</p>
+		<input type="radio" name="cevap" value="a">.exe<br>
+		<input type="radio" name="cevap" value="b">.jar<br>
+		<input type="radio" name="cevap" value="c">.dll<br>
+		<input type="radio" name="cevap" value="d">.py<br>
+		<input type="radio" name="cevap" value="e">.bat<br>
+        <br><br>
+		<button type="button" onclick="location.href='soru6.html'">Sonraki sayfa</button>
+	</form>
+</body>
+</html>
+

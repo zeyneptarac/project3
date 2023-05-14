@@ -1,0 +1,33 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+	<div class="sonuc">
+		<h2>Sonuçlar</h2>
+		<p>Toplam Puan: <span id="toplam-puan"></span></p>
+		<p>Geçen Süre: <span id="gecen-sure"></span></p>
+	</div>
+    <div id="test" style="display:none">
+	  <h2>Test</h2>
+	  <div id="question"></div>
+	  <div id="choices"></div>
+	  <button type="button" onclick="submitAnswer()">Cevabını Onayla</button>
+	  <br><br>
+	  <div id="timer"></div>
+	  <br><br>
+	  <button type="button" onclick="finishTest()">Testi Bitir</button>
+    </div>
+    <div id="result" style="display:none">
+	  <h2>Sonuç</h2>
+	  <p id="score"></p>
+	  <button type="button" onclick="logout()">Çıkış Yap</button>
+    </div>
+    <script src="script.js"></script> 
+</body>
+</html>	
